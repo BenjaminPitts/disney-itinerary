@@ -1,25 +1,23 @@
-
-# React Token Based Web Auth Starter Code
-
-Welcome to the README for some easy starter code to get your MERN
-app going with user authentication with JWT.
+# React Auth Starter Code
 
 ## Instructions
-- After cloning this project and installing the dependencies, you will need to add a ".env" file in the root directory and add the following:
-
+- Inside terminal run
+    - `npm i`
+    - `npm update`
+    
+- Add a ".env" file in the root directory and add the following:
     - `DATABASE_URL=\<Your Database URL>`
 
     - `SECRET=\<Your String of Choice>`
+    
 - Then in terminal:
-    - `$ npm run build`
+    - `npm run build`
+    
 - Then open two different terminals and run each of the below separately
-    - `$ nodemon server`
-    - `$ npm start`
-
-The world is now your oyster. Go for it, you amazing developer!
-
-# All That Jazz from React
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    - `nodemon server`
+    - `npm start`
+    
+- YOU'RE DONE! code away!
 
 ## Available Scripts
 
@@ -87,4 +85,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# react-auth-starter
+
