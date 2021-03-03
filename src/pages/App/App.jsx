@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
+import MainPage from '../mainpage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -34,7 +35,9 @@ class App extends Component {
         />
         <Switch>
           <Route exact path='/' render={() =>
-           <div>Hello World! This is a test app with auth!</div> 
+           <div>Hello World! This is the auth page.<br /><br />
+           <a href='/main'>Main Page</a>
+           </div>
           }/>
           <Route exact path='/signup' render={({ history }) =>
             <SignupPage
@@ -48,6 +51,12 @@ class App extends Component {
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
+          }/>
+          <Route exact path='/main' render={() =>
+           <div>
+           <MainPage /><br />
+           <a href='/'>Back to Auth Page</a>
+           </div>
           }/>
         </Switch>
       </div>
