@@ -4,6 +4,8 @@ import './App.css';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import MainPage from '../mainpage';
+import ActivitiesPage from '../activitiespage';
+import ItineraryPage from '../itinerarypage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -35,7 +37,7 @@ class App extends Component {
         />
         <Switch>
           <Route exact path='/' render={() =>
-           <div>Hello World! This is the auth page.<br /><br />
+           <div>Hello World! This is the landing page with auth.<br /><br />
            <a href='/main'>Main Page</a>
            </div>
           }/>
@@ -55,7 +57,23 @@ class App extends Component {
           <Route exact path='/main' render={() =>
            <div>
            <MainPage /><br />
-           <a href='/'>Back to Auth Page</a>
+           <a href='activities'>Activities Page</a><br />
+           <a href='/itinerary'>Itinerary Page</a><br />
+           <a href='/'>Back to Landing Page</a>
+           </div>
+          }/>
+          <Route exact path='/activities' render={() =>
+           <div>
+           <ActivitiesPage /><br />
+           <a href='/itinerary'>Itinerary Page</a><br />
+           <a href='/main'>Back to Main Page</a>
+           </div>
+          }/>
+          <Route exact path='/itinerary' render={() =>
+           <div>
+           <ItineraryPage /><br />
+           <a href='/activities'>Activities Page</a><br />
+           <a href='/main'>Back to Main Page</a>
            </div>
           }/>
         </Switch>

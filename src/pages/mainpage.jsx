@@ -7,6 +7,7 @@ class MainPage extends Component {
     return (
       <div className='MainPage'>
         <h2>This is being renderend from the 'main page' component</h2>
+        <h3>This page can include pictures, links, and a welcoming message</h3>
       </div>
     );
   }
